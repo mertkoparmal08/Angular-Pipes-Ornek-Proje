@@ -16,5 +16,5 @@ Angular Pipes Ornek Proje
 * Bootstrap ile görüntü düzenlendi.
 #
 ![My Image](1.JPG)
-![My Image](3.JPG)
+![My Image](2.JPG)
 
