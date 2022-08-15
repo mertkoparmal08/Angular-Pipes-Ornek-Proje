@@ -1,0 +1,93 @@
+<div class="container">
+  <h3>Fatura</h3>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>İsim</label>
+        <input class="form-control" type="text" (input)="onNameChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>İsim</b></label>
+      <div>{{name | titlecase}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Ödeme Tarihi</label>
+        <input class="form-control" type="date" (input)="onDateChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>Ödeme Tarihi</b></label>
+      <div>{{date | date:'longDate'}}</div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Tutar</label>
+        <input class="form-control" (input)="onCostChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>Tutar</b></label>
+      <div>{{cost | currency}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Mil</label>
+        <input class="form-control" (input)="onDistanceChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>KM</b></label>
+      <div>{{distance | convert}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Fahrenheit</label>
+        <input class="form-control" (input)="onHeatChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>Derece</b></label>
+      <div>{{heat | convertheat}}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>USD</label>
+        <input class="form-control" (input)="onCryptoChange($event.target.value)">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label><b>BitCoin</b></label>
+      <div>{{crypto | convertcrypto:'BTC'}}</div>
+      <label><b>Ethereum</b></label>
+      <div>{{crypto | convertcrypto:'ETH'}}</div>
+      <label><b>Solana</b></label>
+      <div>{{crypto | convertcrypto:'SOL'}}</div>
+    </div>
+  </div>
+  
+</div>
+
